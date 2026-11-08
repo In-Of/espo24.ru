@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://espo24.ru/sitemap.xml

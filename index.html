@@ -1,17 +1,20 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EspoCRM на русском — espo24.ru</title>
-  <meta name="description" content="Внедрение и настройка EspoCRM на русском. Независимая команда внедрения Просто24.">
-  <link rel="canonical" href="https://prosto-24.ru/">
-  <meta http-equiv="refresh" content="0; url=https://prosto-24.ru/">
-  <script>location.replace("https://prosto-24.ru/");</script>
-  <style>body{font-family:system-ui,sans-serif;background:#F6F4EF;color:#1C211F;display:grid;place-items:center;min-height:100vh;margin:0;padding:16px;text-align:center}a{color:#D2561F}</style>
-</head>
-<body>
-  <p>Переходим на <a href="https://prosto-24.ru/">prosto-24.ru</a> — своя CRM на базе EspoCRM за 24 часа.<br>
-  <small>espo24.ru — проект независимой команды внедрения Просто24, не официальный сайт EspoCRM.</small></p>
-</body>
-</html>
+---
+layout: default
+seo_title: "EspoCRM на русском: обзор, сравнение с Битрикс24, хостинг — espo24.ru"
+description: "EspoCRM на русском простыми словами: что это за CRM, сколько стоит, чем отличается от Битрикс24 и где её разместить. Независимый справочник от команды Просто24."
+---
+<section class="wrap home">
+  <h1>EspoCRM на русском</h1>
+  <p class="lead">EspoCRM — бесплатная CRM с открытым кодом, которая работает на вашем сервере и принадлежит компании. Здесь — что она умеет, кому подходит, чем отличается от Битрикс24 и где её разместить. Простыми словами, без технических подробностей.</p>
+  <h2 id="spravochnik">Справочник</h2>
+  <ul class="list">{% assign sorted = site.posts | sort: "order" %}{% for p in sorted %}{% if p.section == "Справочник" %}<li><a href="{{ p.url }}">{{ p.title }}</a></li>{% endif %}{% endfor %}</ul>
+  <h2 id="pereezd">Переезд с Битрикс24</h2>
+  <ul class="list">{% assign sorted = site.posts | sort: "order" %}{% for p in sorted %}{% if p.section == "Переезд с Б24" %}<li><a href="{{ p.url }}">{{ p.title }}</a></li>{% endif %}{% endfor %}</ul>
+  {% assign lessons = site.posts | where: "section", "Уроки" %}{% if lessons.size > 0 %}
+  <h2 id="uroki">Уроки для сотрудников</h2>
+  <ul class="list">{% for p in lessons %}<li><a href="{{ p.url }}">{{ p.title }}</a></li>{% endfor %}</ul>{% endif %}
+  <div class="home__about">
+    <p><b>Кто пишет.</b> Дмитрий, основатель Просто24. Мы запускаем компаниям собственную CRM на EspoCRM за 24 часа: настраиваем под процесс, переносим данные из Битрикс24, предоставляем сервер в России и обучаем сотрудников.</p>
+    <a href="https://prosto-24.ru/" class="btn">Подробнее на prosto-24.ru</a>
+  </div>
+</section>

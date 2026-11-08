@@ -5,6 +5,13 @@ layout: default
   <p class="meta">{{ page.section }}{% if page.author %} · {{ page.author }}{% endif %}</p>
   <h1>{{ page.title }}</h1>
   {{ content }}
+  {% assign others = site.posts | where_exp: "p", "p.url != page.url" %}
+  {% if others.size > 0 %}
+  <nav class="related">
+    <p class="related__title">Читайте также</p>
+    <ul class="list">{% for p in others limit: 4 %}<li><a href="{{ p.url }}">{{ p.title }}</a></li>{% endfor %}</ul>
+  </nav>
+  {% endif %}
   <aside class="cta">
     <p><b>Хотите свою CRM на EspoCRM?</b> Настроим под ваш процесс, перенесём данные и обучим сотрудников — за 24 часа.</p>
     <a href="https://prosto-24.ru/" class="btn">Подробнее на prosto-24.ru</a>
