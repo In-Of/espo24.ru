@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap top__in">
+  <a href="/" class="logo">espo<span>24</span></a>
+  <nav class="nav"><a href="/#spravochnik">Справочник</a><a href="/#pereezd">Переезд с Б24</a><a href="/#uroki">Уроки</a></nav>
+  <a href="https://prosto-24.ru/" class="btn">CRM за 24 часа</a>
+</div></header>
+<main>{{ content }}</main>
+<footer class="foot"><div class="wrap">
+  <p>espo24.ru — независимый проект команды внедрения <a href="https://prosto-24.ru/">Просто24</a>. Не официальный сайт EspoCRM.</p>
+  <p class="small">EspoCRM — товарный знак EspoCRM, Inc. Битрикс24 — товарный знак его правообладателя.</p>
+</div></footer>
+</body>
+</html>
